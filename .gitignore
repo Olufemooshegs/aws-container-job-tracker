@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Env & secrets
+.env
+.env.local
+
+# Docker
+*.log
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Terraform (for later)
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
