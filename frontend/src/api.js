@@ -1,10 +1,18 @@
 /**
  * Axios instance with JWT interceptor.
+ *
+ * API URL resolution priority:
+ * 1. window.__API_URL__  — injected at runtime via /config.js
+ * 2. VITE_API_URL env var — set at build time (local dev)
+ * 3. localhost:8000      — fallback for local dev
  */
 
 import axios from 'axios'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API_URL =
+  (typeof window !== 'undefined' && window.__API_URL__) ||
+  import.meta.env.VITE_API_URL ||
+  'http://localhost:8000'
 
 export const api = axios.create({
   baseURL: `${API_URL}/api`,

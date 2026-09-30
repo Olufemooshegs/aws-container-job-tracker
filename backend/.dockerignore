@@ -10,4 +10,7 @@ venv/
 *.log
 .git/
 .gitignore
-.env
+.env.aws/
+credentials
+*.tfstate
+*.tfstate.*
