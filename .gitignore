@@ -27,3 +27,5 @@ dist/
 *.tfstate
 *.tfstate.*
 *.tfplan
+node_modules/
+dist/
